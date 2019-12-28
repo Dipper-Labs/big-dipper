@@ -6,7 +6,7 @@ import LinkIcon from '../components/LinkIcon.jsx';
 import Delegations from './Delegations.jsx';
 import Unbondings from './Unbondings.jsx';
 import AccountTransactions from '../components/TransactionsContainer.js';
-import ChainStates from '../components/ChainStatesContainer.js'
+// import ChainStates from '../components/ChainStatesContainer.js'
 import { Helmet } from 'react-helmet';
 import { WithdrawButton, TransferButton } from '../ledger/LedgerActions.jsx';
 import i18n from 'meteor/universe:i18n';
@@ -47,7 +47,7 @@ export default class AccountDetails extends Component{
 
     getBalance(){
 
-        let numRewards = new Object();
+        let numRewards = {};
         
         Meteor.call('coinStats.getStats', (error, result) => {
             if (result){
@@ -282,7 +282,7 @@ export default class AccountDetails extends Component{
                 </Helmet>
                 <Row>
                     <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>accounts.accountDetails</T></h1></Col>
-                    <Col md={9} xs={12} className="text-md-right"><ChainStates denom ={this.state.denom} /></Col>
+                    {/* <Col md={9} xs={12} className="text-md-right"><ChainStates /></Col> */}
                 </Row>
                 <Row>
                     <Col><h3 className="text-primary"><AccountCopy address={this.state.address} /></h3></Col>
@@ -350,8 +350,8 @@ export default class AccountDetails extends Component{
                             address={this.state.address} 
                             delegations={this.state.delegations}
                             reward={this.state.reward}
-                            denom ={this.state.denom}
-                            rewardsForEachDel ={this.state.rewardsForEachDel}
+                            denom={this.state.denom}
+                            rewardsForEachDel={this.state.rewardsForEachDel}
                         />
                     </Col>
                     <Col md={6}>
