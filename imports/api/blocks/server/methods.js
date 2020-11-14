@@ -202,7 +202,8 @@ Meteor.methods({
                         blockData.validators = [];
 
                         // Tendermint v0.33 start using "signatures" in last block instead of "precommits"
-                        let precommits = block.block.last_commit.signatures; 
+                        // Dipper Network use Tendermint v0.32, so we should use precommits
+                        let precommits = block.block.last_commit.precommits;
                         if (precommits != null){
                             // console.log(precommits.length);
                             for (let i=0; i<precommits.length; i++){
