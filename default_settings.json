@@ -24,7 +24,7 @@
             } 
         ],
         "gasPrice": 0.000006,
-        "coingeckoId": "dip"
+        "coingeckoId": "dipper-network"
     },
     "genesisFile": "https://raw.githubusercontent.com/Dipper-Labs/mainnet/master/config/config.toml",
     "remote":{
