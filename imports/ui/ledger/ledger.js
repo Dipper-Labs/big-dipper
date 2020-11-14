@@ -310,7 +310,7 @@ export class Ledger {
         uatomAmount
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgDelegate',
+            type: 'dip/MsgDelegate',
             value: {
                 amount: {
                     amount: uatomAmount.toString(),
@@ -332,7 +332,7 @@ export class Ledger {
         uatomAmount
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgUndelegate',
+            type: 'dip/MsgUndelegate',
             value: {
                 amount: {
                     amount: uatomAmount.toString(),
@@ -355,7 +355,7 @@ export class Ledger {
         uatomAmount
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgBeginRedelegate',
+            type: 'dip/MsgBeginRedelegate',
             value: {
                 amount: {
                     amount: uatomAmount.toString(),
@@ -378,7 +378,7 @@ export class Ledger {
         amount
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgSend',
+            type: 'dip/MsgSend',
             value: {
                 amount: [{
                     amount: amount.toString(),
@@ -399,10 +399,10 @@ export class Ledger {
         deposit
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgSubmitProposal',
+            type: 'dip/MsgSubmitProposal',
             value: {
                 content: {
-                    type: "cosmos-sdk/TextProposal",
+                    type: "dip/TextProposal",
                     value: {
                         description: description,
                         title: title
@@ -425,7 +425,7 @@ export class Ledger {
         option,
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgVote',
+            type: 'dip/MsgVote',
             value: {
                 option,
                 proposal_id: proposalId.toString(),
@@ -442,7 +442,7 @@ export class Ledger {
         amount,
     ) {
         const txMsg = {
-            type: 'cosmos-sdk/MsgDeposit',
+            type: 'dip/MsgDeposit',
             value: {
                 amount: [{
                     amount: amount.toString(),

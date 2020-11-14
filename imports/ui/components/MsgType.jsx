@@ -7,47 +7,47 @@ const T = i18n.createComponent();
 export const MsgType = (props) => {
     switch (props.type){
     // bank
-    case "cosmos-sdk/MsgSend":
+    case "dip/MsgSend":
         return <Badge color="success"><T>messageTypes.send</T></Badge>
-    case "cosmos-sdk/MsgMultiSend":
+    case "dip/MsgMultiSend":
         return <Badge color="success"><T>messageTypes.multiSend</T></Badge>
         
         // staking
-    case "cosmos-sdk/MsgCreateValidator":
+    case "dip/MsgCreateValidator":
         return <Badge color="warning"><T>messageTypes.createValidator</T></Badge>;
-    case "cosmos-sdk/MsgEditValidator":
+    case "dip/MsgEditValidator":
         return <Badge color="warning"><T>messageTypes.editValidator</T></Badge>;
-    case "cosmos-sdk/MsgDelegate":
+    case "dip/MsgDelegate":
         return <Badge color="warning"><T>messageTypes.delegate</T></Badge>;
-    case "cosmos-sdk/MsgUndelegate":
+    case "dip/MsgUndelegate":
         return <Badge color="warning"><T>messageTypes.undelegate</T></Badge>;
-    case "cosmos-sdk/MsgBeginRedelegate":
+    case "dip/MsgBeginRedelegate":
         return <Badge color="warning"><T>messageTypes.redelegate</T></Badge>;
         
         // gov
-    case "cosmos-sdk/MsgSubmitProposal":
+    case "dip/MsgSubmitProposal":
         return <Badge color="info"><T>messageTypes.submitProposal</T></Badge>
-    case "cosmos-sdk/MsgDeposit":
+    case "dip/MsgDeposit":
         return <Badge color="info"><T>messageTypes.deposit</T></Badge>
-    case "cosmos-sdk/MsgVote":
+    case "dip/MsgVote":
         return <Badge color="info"><T>messageTypes.vote</T></Badge>;
         
         // distribution
-    case "cosmos-sdk/MsgWithdrawValidatorCommission":
+    case "dip/MsgWithdrawValidatorCommission":
         return <Badge color="secondary"><T>messageTypes.withdrawComission</T></Badge>;
-    case "cosmos-sdk/MsgWithdrawDelegationReward":
+    case "dip/MsgWithdrawDelegationReward":
         return <Badge color="secondary"><T>messageTypes.withdrawReward</T></Badge>;
-    case "cosmos-sdk/MsgModifyWithdrawAddress":
+    case "dip/MsgModifyWithdrawAddress":
         return <Badge color="secondary"><T>messageTypes.modifyWithdrawAddress</T></Badge>;
 
         // slashing
-    case "cosmos-sdk/MsgUnjail":
+    case "dip/MsgUnjail":
         return <Badge color="danger"><T>messageTypes.unjail</T></Badge>;
         
         // ibc
-    case "cosmos-sdk/IBCTransferMsg":
+    case "dip/IBCTransferMsg":
         return <Badge color="dark"><T>messageTypes.IBCTransfer</T></Badge>;
-    case "cosmos-sdk/IBCReceiveMsg":
+    case "dip/IBCReceiveMsg":
         return <Badge color="dark"><T>messageTypes.IBCReceive</T></Badge>;
 
     default:

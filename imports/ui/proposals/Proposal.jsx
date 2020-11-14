@@ -297,11 +297,11 @@ export default class Proposal extends Component{
                             <Col md={9} className="value"><Markdown markup={this.props.proposal.content.value.description} /></Col>
                         </Row>
                         {/* Community Pool Spend Proposal */}
-                        {(this.props.proposal.content.type === 'cosmos-sdk/CommunityPoolSpendProposal')?<Row className="mb-2 border-top">
+                        {(this.props.proposal.content.type === 'dip/CommunityPoolSpendProposal')?<Row className="mb-2 border-top">
                             <Col md={3} className="label"><T>proposals.recipient</T></Col>
                             <Col md={9} className="value"> <Account address={this.props.proposal.content.value.recipient}/></Col> 
                         </Row>:null}
-                        {(this.props.proposal.content.type === 'cosmos-sdk/CommunityPoolSpendProposal')?<Row className="mb-2 border-top">
+                        {(this.props.proposal.content.type === 'dip/CommunityPoolSpendProposal')?<Row className="mb-2 border-top">
                             <Col md={3} className="label"><T>proposals.amount</T></Col>
                             <Col md={9} className="value"> {this.props.proposal.content.value.amount.map((amount, j) => {
                                 return <div key={j}>{new Coin(amount.amount, amount.denom).toString()}</div>
@@ -335,7 +335,7 @@ export default class Proposal extends Component{
                             </Col>
                         </Row>
                         {/* Parameter Change Proposal */}
-                        {(this.props.proposal.content.type === 'cosmos-sdk/ParameterChangeProposal')?<Row className="mb-2 border-top">
+                        {(this.props.proposal.content.type === 'dip/ParameterChangeProposal')?<Row className="mb-2 border-top">
                             <Col md={3} className="label"><T>proposals.changes</T></Col>
                             <Col md={6} className="value-table text-center">
                                 <Table bordered responsive="sm">

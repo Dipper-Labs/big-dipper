@@ -33,7 +33,7 @@ Meteor.methods({
         }
     },
     'Transactions.findDelegation': function(address, height){
-        // following cosmos-sdk/x/slashing/spec/06_events.md and cosmos-sdk/x/staking/spec/06_events.md
+        // following dip/x/slashing/spec/06_events.md and dip/x/staking/spec/06_events.md
         return Transactions.find({
             $or: [{$and: [
                 {"logs.events.type": "delegate"},
