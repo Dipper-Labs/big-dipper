@@ -1,10 +1,10 @@
 {
     "public":{
         "chainName": "Dipper Network",
-        "chainId": "dip-prinet-sky",
+        "chainId": "dipperhub1",
         "gtm": "",
-        "slashingWindow": 34560,
-        "uptimeWindow": 34560,
+        "slashingWindow": 1000,
+        "uptimeWindow": 1000,
         "initialPageSize": 30,
         "secp256k1": false,
         "bech32PrefixAccAddr": "dip",
@@ -14,14 +14,14 @@
         "bech32PrefixConsAddr": "dipvalcons",
         "bech32PrefixConsPub": "dipvalconspub",
         "bondDenom": "pdip",
-        "powerReduction": 1000000000000,
+        "powerReduction": 1000000,
         "coins": [
             {
                 "denom": "pdip",
                 "displayName": "DIP",
-                "displayNamePlural": "DIP",
+                "displayNamePlural": "pdip",
                 "fraction": 1000000000000
-            }
+            } 
         ],
         "gasPrice": 0.000006,
         "coingeckoId": "dipper-network"
