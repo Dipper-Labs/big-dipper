@@ -50,6 +50,10 @@ export const MsgType = (props) => {
     case "dip/IBCReceiveMsg":
         return <Badge color="dark"><T>messageTypes.IBCReceive</T></Badge>;
 
+        // vm
+    case "dip/MsgContract":
+        return <Badge color="info"><T>messageTypes.contractTx</T></Badge>;
+
     default:
         return <Badge color="primary">{props.type}</Badge>;
     }

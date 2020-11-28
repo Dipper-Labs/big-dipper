@@ -95,6 +95,9 @@ export default class Activites extends Component {
         case "dip/IBCReceiveMsg":
             return <MsgType type={msg.type} />
 
+            case "dip/MsgContract":
+            return <p><Account address={msg.value.from} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <span className="text-success">{new Coin(msg.value.amount.amount, msg.value.amount.denom).toString(6)}</span> <T>activities.to</T> <span className="address"><Account address={msg.value.to} /> payload={msg.value.payload}</span><T>common.fullStop</T></p>
+
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>
         }
