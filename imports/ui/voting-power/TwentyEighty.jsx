@@ -36,12 +36,12 @@ export default class TwentyEighty extends Component{
                                 bottomPercent
                             ],
                             backgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
+                                '#158cba',
+                                '#75caeb'
                             ],
                             hoverBackgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
+                                '#158cba',
+                                '#75caeb'
                             ]
                         }
                     ]
